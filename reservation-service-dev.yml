@@ -1,2 +1,15 @@
+server:
+  port: 8080
 
-
+spring:
+  application:
+    name: reservation-service
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/reactive?useSSL=false&useUnicode=yes&characterEncoding=UTF-8
+    username: postgres
+    password: '@Abc123!'
+  main:
+    lazy-initialization: true
+  cloud:
+    config:
+      uri: http://localhost:8888
